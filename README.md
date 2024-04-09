@@ -83,7 +83,7 @@ This application is deployed on Render and can be accessed using the following e
      ```
    Replace `"events.csv"` with the path to your CSV file containing event data.
 
-Feel free to interact with the API using the provided endpoints. Let me know if you need any further assistance!
+Feel free to interact with the API using the provided endpoints.
 
 ### Data Creation API
 - **Endpoint**: `/api/events`
