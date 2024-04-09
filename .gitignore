@@ -1,0 +1,4 @@
+.env
+events-venv/
+__pycache__/
+*.pyc
