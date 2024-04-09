@@ -49,6 +49,41 @@ The database used for this project stores information about events, including ev
     2. `python main.py`
 
 ## API Endpoints
+### Render Deployment
+
+This application is deployed on Render and can be accessed using the following endpoints:
+
+- **Base URL**: [https://event-management-service-1aw6.onrender.com](https://event-management-service-1aw6.onrender.com)
+
+#### Endpoints
+
+1. **Retrieve Events**: 
+   - **URL**: [https://event-management-service-1aw6.onrender.com/api/events/find](https://event-management-service-1aw6.onrender.com/api/events/find)
+   - **Method**: GET
+   - **Description**: Retrieves events based on the user's location and specified date.
+   - **Request Parameters**:
+     - `date`: Date in the format YYYY-MM-DD.
+     - `lat`: Latitude of the user's location.
+     - `lon`: Longitude of the user's location.
+     - `page`: (Optional) Page number for pagination (default is 1).
+   - **Example CURL Request**:
+     ```bash
+     curl -X GET "https://event-management-service-1aw6.onrender.com/api/events/find?date=2024-04-10&lat=40.7128&lon=-74.0060&page=1"
+     ```
+
+2. **Upload Events from CSV**: 
+   - **URL**: [https://event-management-service-1aw6.onrender.com/api/events](https://event-management-service-1aw6.onrender.com/api/events)
+   - **Method**: POST
+   - **Description**: Uploads events from a CSV file.
+   - **Request Parameters**:
+     - `file`: CSV file containing event data.
+   - **Example CURL Request**:
+     ```bash
+     curl -X POST -F "file=@events.csv" "https://event-management-service-1aw6.onrender.com/api/events"
+     ```
+   Replace `"events.csv"` with the path to your CSV file containing event data.
+
+Feel free to interact with the API using the provided endpoints. Let me know if you need any further assistance!
 
 ### Data Creation API
 - **Endpoint**: `/api/events`
