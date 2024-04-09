@@ -12,6 +12,22 @@ The Event Management System is a RESTful service that manages and queries event 
 
 ## Database
 MongoDB was chosen as the database due to its flexibility in handling unstructured data, which is common in event management systems. Additionally, MongoDB's scalability makes it suitable for handling large volumes of event data.
+## Database Schema Structure
+
+The database used for this project stores information about events, including event name, city name, date, time, latitude, and longitude. The schema structure is as follows:
+
+### Events Collection
+
+| Field         | Type     | Description                                 |
+|---------------|----------|---------------------------------------------|
+| _id           | ObjectId | Unique identifier for the event             |
+| event_name    | String   | Name of the event                           |
+| city_name     | String   | Name of the city where the event is located |
+| date          | Date     | Date of the event                           |
+| time          | Time     | Time of the event (optional)                |
+| latitude      | Float    | Latitude coordinate of the event location   |
+| longitude     | Float    | Longitude coordinate of the event location  |
+
 
 ## Design Decisions
 - **Flask**: Chosen for its lightweight nature and simplicity in building RESTful APIs.
